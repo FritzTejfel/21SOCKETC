@@ -5,10 +5,10 @@
 #include <netinet/in.h> 
 #include <time.h> 
 
-#define BUFFER_SIZE 1024
-#define DATA_SIZE 100
-#define PORT 2001
-#define DECKSIZE 32
+#define BUFFER_SIZE 1024		//BUFFEER SIZE
+#define DATA_SIZE 100			//DATA BUILDER ARRAY SIZE
+#define PORT 2001			//PORT NUMBER
+#define DECKSIZE 32			//DECKSIZE
 
 
 /*DECK BUILD*/
@@ -129,7 +129,7 @@ int main(int argc, char *argv[] ) {
 	int RecieveFlags = 0;		//0, it means that no flags are specified
 	int bytes;					//MESSAGE SIZE
 	int rcvsize;   				//RECIEVED BYTES                 	
-    int trnmsize;     			//TRANSMITED BYTES              	
+  	int trnmsize;     			//TRANSMITED BYTES              	
 	
 	char on = 1;
 	char buffer[BUFFER_SIZE + 1];
@@ -140,7 +140,6 @@ int main(int argc, char *argv[] ) {
 	int ServerSize = sizeof server;
 	int ClientSize = sizeof client;
 
-    /* SOCKET things */
 
     /* 	GAME things */
 
@@ -159,7 +158,7 @@ int main(int argc, char *argv[] ) {
 
     /* 	GAME things */
 
-	server.sin_family = AF_INET;
+    server.sin_family = AF_INET;
     server.sin_addr.s_addr = INADDR_ANY;
     server.sin_port = htons(PORT);
 
